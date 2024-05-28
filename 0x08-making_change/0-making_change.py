@@ -17,7 +17,8 @@ def makeChange(coins, total):
     # Compute the minimum coins required for each amount
     for coin in coins:
         for amount in range(coin, total + 1):
-            table[amount] = min(table[amount], table[amount - coin] + 1)
+            if table[amount - coin] != float('inf'):
+                table[amount] = min(table[amount], table[amount - coin] + 1)
 
     if table[total] == float('inf'):
         return -1
