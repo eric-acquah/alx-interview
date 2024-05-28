@@ -5,10 +5,11 @@ Solution for making change problem
 
 """
 
+
 def makeChange(coins, total):
     if total <= 0:
         return 0
-    
+
     # Initailize the amount table
     table = [float('inf')] * (total + 1)
     table[0] = 0
