@@ -20,6 +20,4 @@ def makeChange(coins, total):
             if table[amount - coin] != float('inf'):
                 table[amount] = min(table[amount], table[amount - coin] + 1)
 
-    if table[total] == float('inf'):
-        return -1
-    return table[total]
+    return table[total] if table[total] != float('inf') else -1
