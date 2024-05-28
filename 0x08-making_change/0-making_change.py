@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+Solution for making change problem
+
+"""
+
 def makeChange(coins, total):
     if total <= 0:
         return 0
